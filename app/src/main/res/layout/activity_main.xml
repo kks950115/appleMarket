@@ -64,4 +64,22 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent" />
 
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/floatingbtn_totop"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="30dp"
+        android:layout_marginBottom="30dp"
+        android:backgroundTint="@color/white"
+        android:hapticFeedbackEnabled="true"
+        app:borderWidth="0dp"
+        app:fabCustomSize="40dp"
+        app:fabSize="normal"
+        app:maxImageSize="40dp"
+        app:elevation="0dp"
+        android:tint="@null"
+        android:src="@drawable/arrow_up"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

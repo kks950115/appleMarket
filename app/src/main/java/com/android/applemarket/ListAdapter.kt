@@ -42,11 +42,13 @@ class ListAdapter (val Items: MutableList<Product>) : RecyclerView.Adapter<ListA
 
         val deciamlFormat = DecimalFormat("#,###")
         val cPrice = deciamlFormat.format(Items[position].price)
-        holder.price.text = cPrice.toString()
-
+        holder.price.text = "${cPrice} 원"
         holder.chat.text = Items[position].chat.toString()
         holder.like.text = Items[position].like.toString()
-
+        if(Items[position].isLike)
+            holder.likeImg.setImageResource(R.drawable.heartredfill)
+        else
+            holder.likeImg.setImageResource(R.drawable.heart)
     }
 
     override fun getItemId(position: Int): Long {
@@ -65,6 +67,7 @@ class ListAdapter (val Items: MutableList<Product>) : RecyclerView.Adapter<ListA
         var address = binding.tvAddress
         var like =binding.tvLikeCount
         var chat =binding.tvCommentCount
+        var likeImg = binding.ivLike
     }
 
 }

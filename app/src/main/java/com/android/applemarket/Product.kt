@@ -13,5 +13,6 @@ data class Product (
     var price : Int , //가격
     var address : String, //주소
     var like : Int, //좋아요
-    var chat : Int //채팅
+    var chat : Int, //채팅
+    var isLike: Boolean
 ) : Parcelable

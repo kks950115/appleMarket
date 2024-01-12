@@ -110,7 +110,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="5dp"
             android:layout_marginEnd="15dp"
-            android:text="매너온도"
+            android:text="@string/manner_temperation"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/iv_temperIcon" />
     </androidx.constraintlayout.widget.ConstraintLayout>
@@ -153,29 +153,41 @@
         android:id="@+id/constraintLayout2"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:padding="20dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent">
 
-        <ImageView
-            android:id="@+id/iv_likeIcon"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:src="@drawable/heart"
-            android:tag="heart"
+        <LinearLayout
+            android:id="@+id/ll_likeIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="20dp"
+            android:padding="20dp"
+            android:layout_marginBottom="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iv_likeIcon"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/heart"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </LinearLayout>
 
         <View
             android:layout_width="1dp"
             android:layout_height="40dp"
             android:layout_marginStart="20dp"
             android:background="#cccccc"
-            app:layout_constraintBottom_toBottomOf="@+id/iv_likeIcon"
-            app:layout_constraintStart_toEndOf="@+id/iv_likeIcon"
-            app:layout_constraintTop_toTopOf="@+id/iv_likeIcon" />
+            app:layout_constraintBottom_toBottomOf="@+id/ll_likeIcon"
+            app:layout_constraintStart_toEndOf="@+id/ll_likeIcon"
+            app:layout_constraintTop_toTopOf="@+id/ll_likeIcon" />
 
         <TextView
             android:id="@+id/tv_detail_price"
@@ -186,13 +198,14 @@
             android:textSize="22sp"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintStart_toEndOf="@+id/iv_likeIcon"
+            app:layout_constraintStart_toEndOf="@+id/ll_likeIcon"
             app:layout_constraintTop_toTopOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_gochat"
             android:layout_width="wrap_content"
-            android:layout_height="48dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="20dp"
             android:background="@drawable/round_srquare"
             android:text="채팅하기"
             android:textColor="@color/white"

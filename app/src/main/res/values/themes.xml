@@ -3,6 +3,7 @@
     <style name="Base.Theme.AppleMarket" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+        <item name="windowActionBar">false</item>
     </style>
 
     <style name="Theme.AppleMarket" parent="Base.Theme.AppleMarket" />
